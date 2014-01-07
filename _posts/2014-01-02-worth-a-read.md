@@ -1,4 +1,10 @@
-## Good Stuff I'm Reading
+---
+layout: note
+title: Reading and thinking. 
+description: May be right, may be wrong.
+---
+
+## Good (and Other) Stuff I'm Reading
 
 
 January 5, 2014
