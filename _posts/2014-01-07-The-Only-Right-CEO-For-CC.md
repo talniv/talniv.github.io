@@ -1,7 +1,7 @@
 ---
 layout: post
-title: The TM Enforcing Buffoon
-description: This is the first post that I wrote in this awesome blog
+title: Mike Linksvayer. 
+description: This is about CC going in the write direction
 ---
 
 
