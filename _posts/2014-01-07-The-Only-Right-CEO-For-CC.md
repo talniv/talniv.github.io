@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mike Linksvayer. 
-description: This is about CC going in the write direction
+description: This is about CC going in the right direction
 ---
 
 
@@ -21,3 +21,5 @@ Mike Linksvayer.
 He is professional. He is well respected. He is smart and everybody knows that. He is known. He has been there from the start and have fulfilled almost every role within the org. He is a doer. He has a vision. 
 
 ### Does anybody really need me to say that?
+
+[link](http://)
