@@ -7,7 +7,7 @@ subtitle: Open Sourceress
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>By Tal Niv</title>
+    <title>{{ page.subtitle }}</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -15,49 +15,104 @@ subtitle: Open Sourceress
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <style>
+body {
+  padding-top: 0;
+  margin-top: 0;
+}
+.post_box {
+  border-top: #ccc 1px solid;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #F4F4F4;
+  min-height: 50px;
+}
+
+.post_box:hover {
+  background-color: #E0E0E0;
+}
+
+div.image {
+  width: 250px;
+  margin-left: 10px;
+}
+
+div.head_text {
+  margin-right: 60px;
+}
+
+div.links {
+  width: 50px;
+  float: right;
+  text-align: right;
+}
+
+div.post_box_container {
+  display: inline-block;
+  width: 47%;
+  padding-left: 1%;
+  padding-right: 1%;
+  vertical-align: top;
+}
+
+div.post_box p {
+  color: black;
+}
+    </style>
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>{{ page.title }}<h1>
-        <h2>{{ page.subtitle }}</h2>
-
-        <span style="margin: 20px;">
-          <img align="left" src="TalSittingOnStairs.jpg" width="250" height="324"></img>
-        </span>
-
-        <p class="view"><a href="https://github.com/talniv">View My GitHub Profile</a></p>
-
-        <div>
-          <a href="feed.xml"><img height="30" src="/assets/rss.png"></img></a>
-          &nbsp;
-          <a href="https://twitter.com/talniv"><img height="30" src="/assets/twitter.png"></img></a>
-        <div>
-
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-the-tal-world" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Intellectual Property Wizardry and Open Source Sorcery</h3>
-
-<p>This is all about how to make Intellectual Property Policy work for software, hardware, science, creativity and eductaion</p>
-
-<p> Or, if you like, this is about content regulation wizardry </p>
-<p> Why witchcraft? Because content regulation as it stands is not about collaboration AT ALL. No. Content regulation is about single entities, corporate or human. Mostly corporate. As long as it's this way we need a few spells to make it work for groups. Let's trick it. </p>
-
-
-<a name="talk-elsewhere?" class="anchor" href=""><span class="octicon octicon-link"></span></a>Rather talk somewhere else?</h3>
-<ul>
+      <img src="/assets/top_1.jpeg" width="860" height="243"/>
+      <div style="height: 0;">
+        <div style="position: relative; top: -223px; left: 20px;">
+          <h1>{{ page.title }}</h1>
+          <h2>{{ page.subtitle }}</h2>
+        </div>
+      </div>
+      <div class="header">
+        <div class="links">
+          <a href="feed.xml"><img width="40" src="/assets/rss.png"></img></a>
+          <a href="https://twitter.com/talniv"><img width="40" src="/assets/twitter.png"></img></a>
+          <a href="https://github.com/talniv"><img width="40" src="/assets/github.png"></img></a>
+          <a href="https://www.linkedin.com/pub/tal-niv/0/396/76b"><img width="40" src="/assets/linkedin.png"></img></a>
+        </div>
+        <div class="head_text">
+          <h3>Intellectual Property Wizardry and Open Source Sorcery</h3>
+          <p>This is all about how to make Intellectual Property Policy work for software, hardware, science, creativity and eductaion</p>
+          <p> Or, if you like, this is about content regulation wizardry </p>
+          <p> Why witchcraft? Because content regulation as it stands is not about collaboration AT ALL. No. Content regulation is about single entities, corporate or human. Mostly corporate. As long as it's this way we need a few spells to make it work for groups. Let's trick it. </p>
+        </div>
+      </div>
+      <div class="section">
+{% for i in (1..2) %}
+        <div class="post_box_container container_{{ i }}"> 
+<div>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+  {% assign print_post = false %}
+  {% if post.layout == "note" and i == 1 %}
+    {% assign print_post = true %}
+  {% elsif post.layout != "note" and i == 2 %}
+    {% assign print_post = true %}
+  {% endif %}
+  {% if print_post == true %}
+    <a href="{{ post.url }}">
+      <div class="post_box">
+        <div style="float: left;">
+          <img src="/assets/{{ post.layout }}_icon.png" width="50" height="50"></img>
+        </div>
+        <div style="margin-left: 60px;">
+          <strong>{{ post.title }}</strong>
+          <p>{{ post.description }}</p>
+          <small>{{ post.date | date_to_long_string }}</small>
+        </div>
+      </div>
+    </a>
+  {% endif %}{% endfor %}
+</div>
+        </div>
+{% endfor %}
+      </div>
     </div>
     <script src="javascripts/scale.fix.js"></script>
     
