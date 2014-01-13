@@ -1,6 +1,6 @@
 ---
 layout: note
-title: & Reading
+title: Juvenile Libertarians
 ---
 
 

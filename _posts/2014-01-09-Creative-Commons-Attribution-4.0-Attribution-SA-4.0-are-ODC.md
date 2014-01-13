@@ -1,6 +1,6 @@
 ---
 layout: note
-title: & Reading
+title: Creative Commons Attribution 4.0 Attribution SA 4.0 are ODC
 ---
 
 ### Standards are Important
