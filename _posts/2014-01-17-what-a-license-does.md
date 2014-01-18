@@ -16,7 +16,7 @@ LENGTH: 13739 words
 
 ARTICLE: THREE-DIMENSIONAL PRINTING AND OPEN SOURCE HARDWARE
 
-NAME: ELI GREENBAUM *
+NAME: ELI GREENBAUM
 
 
 it's a very good and useful paper, and it has a footnote that reminds me of a very important work by Steve Weber that goes to the gist of what it means to have a license - it isn't *only* to indicate a set of legal terms, but also to mark the rights holder as part of a group that follows a clear set of principles. it's power is to add the content to that group's assets and to mark it as such. 
