@@ -1,10 +1,11 @@
 
 
 ---
-layout: policy_impact
+layout: post
 title: New content policy for Getty Images
 description: new content policy for Getty images. The good and the bad
 ---
+
 
 ##### Interesting news from Getty Images and Copyright
 This is from the IPKAT, 3.6,2014
